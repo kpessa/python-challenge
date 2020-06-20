@@ -88,8 +88,7 @@
 
 		<pre><code>votes_counter = 0 
 		for row in csvreader:
-	    		 votes_counter += 1
-		</code></pre>
+	    		 votes_counter += 1</code></pre>
 
 	2. A complete list of candidates who received votes
 		* Decided to initialize a dictionary `votes_dictionary` and while progressing through CSV file, if the `Candidate` already had a key in the dictionary, increment his/her vote count.  If not, initialize that `Candidate`'s vote count to 1.
@@ -100,8 +99,7 @@
 		        if row[2] in votes_dictionary:
 		            votes_dictionary[row[2]] += 1
 		        else:
-		            votes_dictionary[row[2]] = 1
-		</code></pre>
+		            votes_dictionary[row[2]] = 1</code></pre>
 		
 	3. The percentage of votes each candidate won
 		* Because I am unsure of how many candidates won votes, instead of hard coding a way to calculate percentages for each candidate, I instead looped through each key in the `votes_dictionary` and calculated the percentage won for each candidate by dividing the **votes for each candidate** (`votes_dictionary[key]`) by the **total number of votes** (`votes_counter`) and then multiplying by 100 to get a percentage. 
@@ -120,8 +118,7 @@
 			# if the current candidate's vote count is greater than winner tracker,
 			if votes_dictionary[key] > winner[0]:	
 				# reassign the winner vote count and candidate name.
-				winner = [votes_dictionary[key],key]
-		</code></pre>
+				winner = [votes_dictionary[key],key]</code></pre>
 
 * An example of how the analysis should look was given..
 

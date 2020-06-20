@@ -12,6 +12,8 @@
 
 ## 1. PyBank <a name="pybank"></a>
 
+![](Images/pybank.png)
+
 #### Setup
 * Created a new python file `main.py` that is the main script to run for the analysis
 1. Added a `Resources` folder that contains a CSV file `budget_data.csv`
@@ -74,6 +76,8 @@
 	![](Images/file_output.png)
 
 ## 2. PyPoll <a name="pypoll"></a>
+
+![](Images/pypoll.png)
 
 * Given a set of poll data `election_data.csv` which was composed of three columns:
 	1. `Voter ID`

@@ -142,8 +142,7 @@
     printStr += f"Winner: {winner[1]}\n"
     printStr += "-------------------------\n"
 	
-	print(printStr)
-	</code></pre>
+	print(printStr)</code></pre>
 
 	* My results:
 

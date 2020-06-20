@@ -162,3 +162,6 @@
 	* Result:
 	
 	![](Images/pypoll_text.png)
+
+-----------
+Thank you for making it to the end of this readme! =)

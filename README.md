@@ -1,4 +1,4 @@
-# Python Challenge
+ # Python Challenge
 ###### by Kurt Pessa
 
 #### Setup

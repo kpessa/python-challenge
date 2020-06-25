@@ -16,9 +16,13 @@ with open(csvpath) as csvfile:
     numMonths = 0
     greatestIncrease = ["",0]
     greatestDecrease = ["",0]
-    
+    change_in_profits = 0
+    previousProfitLoss = 0
+
     for row in csvreader:
         currentProfitLoss = int(row[1])
+        if iter(csvreader).line_num != 2:
+            change_in_profits += currentProfitLoss - previousProfitLoss
         if currentProfitLoss > int(greatestIncrease[1]):
             greatestIncrease = row
         if currentProfitLoss < int(greatestDecrease[1]):
@@ -26,10 +30,13 @@ with open(csvpath) as csvfile:
 
         netTotal += currentProfitLoss
         numMonths += 1
+        previousProfitLoss = currentProfitLoss
+    
+    
 
     printStr = f"\nTotal Months: {numMonths}\n"    
     printStr += f"Total: ${netTotal:,}\n"
-    printStr += f"Average Change: ${round(netTotal/numMonths,2):,}\n"
+    printStr += f"Average Change: ${round(change_in_profits/(numMonths-1),2):,}\n"
     printStr += f"Greatest Increase in Profits: {greatestIncrease[0]} (${int(greatestIncrease[1]):,})\n" 
     printStr += f"Greatest Decrease in Profits: {greatestDecrease[0]} (${int(greatestDecrease[1]):,})\n"
 
